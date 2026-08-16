@@ -1,0 +1,39 @@
+# Environment files
+.env
+.env.production
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Node / Frontend
+node_modules/
+auth_app/frontend/node_modules/
+auth_app/frontend/dist/
+auth_app/frontend/.vercel/
+auth_app/frontend/.git/
+
+# IDE / OS
+.vercel/
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Temp / misc
+*.docx
+*.jpeg
+*.jpg
+*.png
+!auth_app/frontend/public/bot-logo.png
+openapi_check.json
+COMPLETE CONVERSATION FLOW.docx
+WhatsApp Image*
