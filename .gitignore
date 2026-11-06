@@ -37,3 +37,10 @@ Thumbs.db
 openapi_check.json
 COMPLETE CONVERSATION FLOW.docx
 WhatsApp Image*
+
+.env.*
+!.env.example
+*.pyc
+.claude/
+data/case_patterns.jsonl
+data/case_dataset_en.json

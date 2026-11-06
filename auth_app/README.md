@@ -99,9 +99,8 @@ Opens at **http://localhost:5173**. Vite proxies `/api` calls to port 8001.
 | Field | Value |
 |-------|-------|
 | Email | `Daivik@gmail.com` |
-| Password | `Adminlogin@12345678` |
 
-Change these in `.env` before deploying.
+Set the admin credentials in `.env` before deploying.
 
 ---
 

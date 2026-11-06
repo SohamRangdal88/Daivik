@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     ALLOWED_ORIGINS: str = ""
 
     # ── Database ──────────────────────────────────────
-    DATABASE_URL: str = "postgresql+asyncpg://neondb_owner:npg_EvAn6UBPHTW5@ep-withered-scene-a1oimtu5-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+    DATABASE_URL: str
     # Connection pool tuning for ~150 concurrent users
     DB_POOL_SIZE: int = 20
     DB_MAX_OVERFLOW: int = 30
@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     DB_POOL_RECYCLE: int = 1800  # recycle connections every 30 min
 
     # ── JWT ───────────────────────────────────────────
-    JWT_SECRET_KEY: str = "717d633a27dde74c64967d38711a9fce"
+    JWT_SECRET_KEY: str
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
@@ -46,7 +46,7 @@ class Settings(BaseSettings):
 
     # ── Admin seed ────────────────────────────────────
     ADMIN_EMAIL: str = "daivik@gmail.com"
-    ADMIN_PASSWORD: str = "Adminlogin@12345678"
+    ADMIN_PASSWORD: str
     ADMIN_NAME: str = "System Admin"
 
     model_config = {"env_file": ".env", "extra": "ignore"}

@@ -46,11 +46,11 @@ services:
     ports:
       - "8001:8001"
     environment:
-      DATABASE_URL: "postgresql+asyncpg://postgres:postgres@postgres:5432/Daivik_auth"
+      DATABASE_URL: "${DATABASE_URL}"
       REDIS_URL: "redis://redis:6379/0"
-      JWT_SECRET_KEY: "717d633a27dde74c64967d38711a9fce"
+      JWT_SECRET_KEY: "${JWT_SECRET_KEY}"
       ADMIN_EMAIL: "Daivik@gmail.com"
-      ADMIN_PASSWORD: "Adminlogin@12345678"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD}"
       ADMIN_NAME: "System Admin"
       SMTP_HOST: "smtp.resend.com"
       SMTP_PORT: "587"
