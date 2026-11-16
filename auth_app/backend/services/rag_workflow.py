@@ -1508,7 +1508,7 @@ def _generate_analysis(state: SessionState) -> dict[str, Any]:
 
     # Fallback to keyword-based analysis
     if not final_response:
-        final_response = _fallback_analysis(facts, similar_cases)
+                final_response = _fallback_analysis(facts, similar_cases, full_text)
         response_text = _format_analysis_as_text(final_response)
 
     # ── Inject Maintenance/Alimony ₹ Calculation ──────────────
@@ -1946,7 +1946,7 @@ def _compute_maintenance_calculation(full_text: str, facts: dict[str, Any]) -> s
         return None
 
 
-def _fallback_analysis(facts: dict[str, Any], similar_cases: list[dict]) -> dict[str, str]:
+def _fallback_analysis(facts: dict[str, Any], similar_cases: list[dict], full_text: str = "") -> dict[str, str]:
     """Generate analysis using keyword extraction when LLM is unavailable."""
 
     abuse_types = []
@@ -2287,4 +2287,4 @@ def finalize_analysis(state: SessionState) -> dict[str, str]:
 
     facts = extract_facts(full_text)
     similar_cases = retrieve_similar_cases(facts, top_k=5)
-    return _fallback_analysis(facts, similar_cases)
+       return _fallback_analysis(facts, similar_cases, full_text)
